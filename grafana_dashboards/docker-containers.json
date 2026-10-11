@@ -194,10 +194,10 @@
             "maxDataPoints": 100
         },
         {
-            "id": 4,
+            "id": 5,
             "type": "stat",
-            "title": "Memory excluding inactive cache",
-            "description": "Selected container working sets. Includes some reclaimable memory; not an exact application heap measurement.",
+            "title": "Memory usage",
+            "description": "Usage including cache; do not add RSS, cache and working set together.",
             "datasource": {
                 "type": "prometheus",
                 "uid": "${DS_PROMETHEUS}"
@@ -240,7 +240,7 @@
                         "uid": "${DS_PROMETHEUS}"
                     },
                     "editorMode": "code",
-                    "expr": "sum(max by (node_cluster, node_name, container_name, id) (container_memory_working_set_bytes{job=~\"cadvisor(-dind)?\",node_cluster=~\"${node_cluster:regex}\",node_name=~\"${node_name:regex}\",container_name=~\"${container_name:regex}\",container_name!=\"\",image!=\"\",id!=\"/\"}))",
+                    "expr": "sum(max by (node_cluster, node_name, container_name, id) (container_memory_usage_bytes{job=~\"cadvisor(-dind)?\",node_cluster=~\"${node_cluster:regex}\",node_name=~\"${node_name:regex}\",container_name=~\"${container_name:regex}\",container_name!=\"\",image!=\"\",id!=\"/\"}))",
                     "refId": "A",
                     "legendFormat": "{{node_cluster}} / {{node_name}} / {{container_name}}",
                     "range": false,
@@ -251,10 +251,10 @@
             "maxDataPoints": 100
         },
         {
-            "id": 5,
+            "id": 4,
             "type": "stat",
-            "title": "Memory usage",
-            "description": "Usage including cache; do not add RSS, cache and working set together.",
+            "title": "Memory excluding inactive cache",
+            "description": "Selected container working sets. Includes some reclaimable memory; not an exact application heap measurement.",
             "datasource": {
                 "type": "prometheus",
                 "uid": "${DS_PROMETHEUS}"
@@ -297,7 +297,7 @@
                         "uid": "${DS_PROMETHEUS}"
                     },
                     "editorMode": "code",
-                    "expr": "sum(max by (node_cluster, node_name, container_name, id) (container_memory_usage_bytes{job=~\"cadvisor(-dind)?\",node_cluster=~\"${node_cluster:regex}\",node_name=~\"${node_name:regex}\",container_name=~\"${container_name:regex}\",container_name!=\"\",image!=\"\",id!=\"/\"}))",
+                    "expr": "sum(max by (node_cluster, node_name, container_name, id) (container_memory_working_set_bytes{job=~\"cadvisor(-dind)?\",node_cluster=~\"${node_cluster:regex}\",node_name=~\"${node_name:regex}\",container_name=~\"${container_name:regex}\",container_name!=\"\",image!=\"\",id!=\"/\"}))",
                     "refId": "A",
                     "legendFormat": "{{node_cluster}} / {{node_name}} / {{container_name}}",
                     "range": false,
