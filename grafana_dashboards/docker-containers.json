@@ -63,19 +63,7 @@
     "fiscalYearStartMonth": 0,
     "graphTooltip": 1,
     "id": null,
-    "links": [
-        {
-            "title": "Docker dashboards",
-            "type": "dashboards",
-            "tags": [
-                "docker"
-            ],
-            "asDropdown": true,
-            "includeVars": true,
-            "keepTime": true,
-            "targetBlank": true
-        }
-    ],
+    "links": [],
     "panels": [
         {
             "id": 1,
