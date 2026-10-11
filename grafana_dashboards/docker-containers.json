@@ -82,7 +82,7 @@
         {
             "id": 2,
             "type": "stat",
-            "title": "Observed containers",
+            "title": "Containers",
             "description": "Current named Docker cgroups in the selected scope; missing cAdvisor data is not zero.",
             "datasource": {
                 "type": "prometheus",
@@ -139,7 +139,7 @@
         {
             "id": 3,
             "type": "stat",
-            "title": "CPU cores consumed",
+            "title": "CPU usage (cores)",
             "description": "1.0 means one fully occupied CPU core; this is not host CPU percent.",
             "datasource": {
                 "type": "prometheus",
@@ -196,7 +196,7 @@
         {
             "id": 4,
             "type": "stat",
-            "title": "Working set",
+            "title": "Memory excluding inactive cache",
             "description": "Selected container working sets. Includes some reclaimable memory; not an exact application heap measurement.",
             "datasource": {
                 "type": "prometheus",
@@ -367,7 +367,7 @@
         {
             "id": 7,
             "type": "stat",
-            "title": "Starts observed in range",
+            "title": "Containers started in time range",
             "description": "Cgroups whose start timestamp falls in the selected range. Includes deployments; this is not an exact restart counter.",
             "datasource": {
                 "type": "prometheus",
