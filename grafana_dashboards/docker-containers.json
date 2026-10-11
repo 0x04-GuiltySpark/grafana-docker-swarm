@@ -682,7 +682,8 @@
                     "options": {
                         "excludeByName": {
                             "Time": true,
-                            "Value": true
+                            "Value": true,
+                            "Value #A": true
                         },
                         "renameByName": {}
                     }
@@ -698,7 +699,8 @@
                             "Time": true
                         },
                         "renameByName": {
-                            "Value": "CPU (cores)"
+                            "Value": "CPU (cores)",
+                            "Value #B": "CPU (cores)"
                         }
                     }
                 },
@@ -713,7 +715,8 @@
                             "Time": true
                         },
                         "renameByName": {
-                            "Value": "Memory"
+                            "Value": "Memory",
+                            "Value #C": "Memory"
                         }
                     }
                 },
@@ -728,7 +731,8 @@
                             "Time": true
                         },
                         "renameByName": {
-                            "Value": "Disk read"
+                            "Value": "Disk read",
+                            "Value #D": "Disk read"
                         }
                     }
                 },
@@ -743,7 +747,8 @@
                             "Time": true
                         },
                         "renameByName": {
-                            "Value": "Disk write"
+                            "Value": "Disk write",
+                            "Value #E": "Disk write"
                         }
                     }
                 },
@@ -758,7 +763,8 @@
                             "Time": true
                         },
                         "renameByName": {
-                            "Value": "Network in"
+                            "Value": "Network in",
+                            "Value #F": "Network in"
                         }
                     }
                 },
@@ -773,7 +779,8 @@
                             "Time": true
                         },
                         "renameByName": {
-                            "Value": "Network out"
+                            "Value": "Network out",
+                            "Value #G": "Network out"
                         }
                     }
                 },
@@ -3539,7 +3546,7 @@
             ]
         }
     ],
-    "refresh": "15s",
+    "refresh": "1m",
     "schemaVersion": 41,
     "tags": [
         "docker",
